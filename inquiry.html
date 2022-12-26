@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
+    <!-- Iphone 모바일 확대 방지  maximum-scale=1.0, user-scalable=0-->
+    <title>도입문의 - 모임온</title> 
+    <link rel="stylesheet" href="css/import.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="subPage inquiryPage">
+        <header class="active">
+            <div class="contentSize">
+                <h1><a href="index.html"><img src="images/logo.png" alt="moimOn logo"></a></h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">서비스 소개</a>
+                            <div>
+                                <a href="">주요 기능</a>
+                                <a href="">보안 시스템</a>
+                                <a href="">연계 시스템</a>
+                            </div>
+                        </li>
+                        <li><a href="">다운로드</a></li>
+                        <li>
+                            <a href="">활용센터</a>
+                            <div>
+                                <a href="">이용가이드</a>
+                                <a href="">공지사항</a>
+                                <a href="">자주묻는질문</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="btn-black">도입문의</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="contentArea">
+            <h2 class="titleBox">도입문의</h2>
+            <form action="">
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="userName">이름</label>
+                            <input type="text" id="userName" placeholder="이름을 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="companyName">회사명</label>
+                            <input type="text" id="companyName" placeholder="회사명을 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="userMobile">전화번호</label>
+                            <input type="text" id="userMobile" placeholder="전화번호를 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="userEmail">이메일</label>
+                            <input type="text" id="userEmail" placeholder="회사 이메일을 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="userRank">직급</label>
+                            <input type="text" id="userRank" placeholder="직급을 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="userDepartment">부서</label>
+                            <input type="text" id="userDepartment" placeholder="부서를 입력해주세요" required>
+                        </li>
+                        <li>
+                            <label for="inquiryType">문의유형</label>
+                            <select id="inquiryType" required>
+                                <option value="" disabled selected hidden>문의유형을 선택해주세요</option>
+                                <option value="">test</option>
+                                <option value="">test</option>
+                                <option value="">test</option>
+                                <option value="">test</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="numberOfEmployees">사원수</label>
+                            <select id="numberOfEmployees" required>
+                                <option value="" disabled selected hidden>사원수를 선택해주세요</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="contentOfInquiry">문의내용</label>
+                            <textarea id="contentOfInquiry" placeholder="문의내용을 입력해주세요"></textarea>
+                        </li>
+                    </ul>
+                    <input type="checkbox" id="agree">
+                    <label for="agree">
+                        <span>이용약관</span> 과 <span>개인정보 정책</span>에 동의합니다.(필수)
+                    </label>
+                    <input type="submit" value="제출하기" class="btn-black">
+                </fieldset>
+            </form>
+        </section>
+
+        <footer>
+            ©2022 Cordial Inc. All rights reserved. | Privacy Policy&Terms of Service.
+        </footer>
+
+        <a href="" class="btn-black floatingLink">도입문의하기</a>
+    </div>
+</body>
+</html>
