@@ -10,8 +10,9 @@ mark{color: #32c5f4;}
 
 /* 상단 공간 */
 [class *= "Page"]{padding-top: 86px;}
-.mainPage .contentArea{padding-bottom: 150px;}
-.subPage .contentArea{padding-bottom: 90px;}
+[class *= "Page"] .contentArea{padding-bottom: 150px;}
+/* .mainPage .contentArea{padding-bottom: 150px;}
+.subPage .contentArea{padding-bottom: 150px;} */
 
 /* 버튼 */
 [class|="btn"]{text-align: center; border-radius: 10em; display: inline-flex; justify-content: center; align-items: center;}
