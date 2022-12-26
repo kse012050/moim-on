@@ -1,0 +1,38 @@
+/* 메인 */
+/* 메인 공통 */
+.mainPage .BG{position: relative; background: url('../images/main-moimOn.png') no-repeat center top 437px / 1400px fixed;}
+.mainPage .BG .BGArea{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.mainPage .contentArea img{width: 100%;}
+.mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
+/* 메인 - 상단*/
+.mainPage .contentArea{padding-top: 150px; text-align: center; position: relative; z-index: 10;}
+.mainPage .contentArea h2{margin-bottom: 30px;}
+.mainPage .contentArea h2 b{display: block; font-weight: 500; margin-bottom: 16px;}
+.mainPage .contentArea > a{width: 200px; height: 62px; font-size: 19px; font-weight: 500; margin-bottom: 40px;}
+.mainPage .contentArea > p{font-size: 17px; font-weight: 700; color: #666666; line-height: 20px; margin-bottom: 337px;}
+.mainPage .contentArea > p a{text-decoration: underline; text-decoration-color: #32c5f4; text-decoration-thickness: 2px;}
+.mainPage .contentArea > ul.menuBox{display: flex; justify-content: space-between; align-items: center;}
+.mainPage .contentArea > ul.menuBox{width: 580px; margin: 0 auto;}
+.mainPage .contentArea > ul li{flex-shrink: 0;}
+.mainPage .contentArea > ul li a{padding: 0 20px; line-height: 44px; font-size: 17px; font-weight: 500; text-align: center; background-color: #eeeeee; border-radius: 10em;}
+.mainPage .contentArea > ul li:is(.active , :hover) a{color: white; background-color: #191a1c;}
+.mainPage .contentArea section:first-of-type{margin-top: 70px;}
+.mainPage .contentArea section:not(:last-of-type){margin-bottom: 190px;}
+/* 메인 - 조직도 연동을 통한 명확한 협업 시스템 */
+.mainPage .contentArea .systemArea{background: url('../images/main-sysyem.png') no-repeat center top 155px / 100%;}
+.mainPage .contentArea .systemArea p{margin-bottom: 40px;}
+.mainPage .contentArea .systemArea > a{width: 173px; height: 54px; font-size: 16px; font-weight: 500; margin-bottom: 875px;}
+/* 메인 - MoimTalK, 안심하고 오래 함께할 수 있도록 */
+/* 메인 - 고객의 동반자로서 기술 이상의 가치 */
+.mainPage .contentArea .companionArea h3{margin-bottom: 90px;}
+.mainPage .contentArea .companionArea ul{display: flex; justify-content: space-between; margin-bottom: 150px;}
+.mainPage .contentArea .companionArea ul li{flex-shrink: 0; width: 246px; font-size: 20px; font-weight: 400; color: #666666; line-height: 22px; padding-top: 200px; background-repeat: no-repeat; background-size: 180px; background-position: center top;}
+.mainPage .contentArea .companionArea ul li:nth-child(1){background-image: url('../images/main-companion-prize01.png');}
+.mainPage .contentArea .companionArea ul li:nth-child(2){background-image: url('../images/main-companion-prize02.png');}
+.mainPage .contentArea .companionArea ul li:nth-child(3){background-image: url('../images/main-companion-prize03.png');}
+.mainPage .contentArea .companionArea ul li:nth-child(4){background-image: url('../images/main-companion-prize04.png');}
+/* 메인 - 지금 바로, MoimOn/MoimTalk을 만나보세요 */
+.mainPage .contentArea .optimizationArea h3{margin-bottom: 40px;}
+.mainPage .contentArea .optimizationArea ul{display: flex; justify-content: center;}
+.mainPage .contentArea .optimizationArea ul li:not(:last-child){margin-right: 20px;}
+.mainPage .contentArea .optimizationArea ul li a{width: 200px; height: 62px; font-size: 19px; font-weight: 500;}
