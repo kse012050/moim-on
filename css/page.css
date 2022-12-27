@@ -1,6 +1,6 @@
 /* 메인 */
 /* 메인 공통 */
-.mainPage .BG{position: relative; background: url('../images/main-moimOn.png') no-repeat center top 437px / 1400px fixed;}
+.mainPage .BG{position: relative; background: url('../images/main-moimOn.png') no-repeat center top 351px / 1400px;}
 .mainPage .BG .BGArea{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 .mainPage .contentArea img{width: 100%;}
 .mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
@@ -9,7 +9,7 @@
 .mainPage .contentArea h2{margin-bottom: 30px;}
 .mainPage .contentArea h2 b{display: block; font-weight: 500; margin-bottom: 16px;}
 .mainPage .contentArea > a{width: 200px; height: 62px; font-size: 19px; font-weight: 500; margin-bottom: 40px;}
-.mainPage .contentArea > p{font-size: 17px; font-weight: 700; color: #666666; line-height: 20px; margin-bottom: 337px;}
+.mainPage .contentArea > p{font-size: 17px; font-weight: 400; color: #666666; line-height: 20px; margin-bottom: 337px;}
 .mainPage .contentArea > p a{text-decoration: underline; text-decoration-color: #32c5f4; text-decoration-thickness: 2px;}
 .mainPage .contentArea > ul.menuBox{display: flex; justify-content: space-between; align-items: center;}
 .mainPage .contentArea > ul.menuBox{width: 580px; margin: 0 auto;}
