@@ -23,6 +23,14 @@
 .mainPage .contentArea .systemArea p{margin-bottom: 40px;}
 .mainPage .contentArea .systemArea > a{width: 173px; height: 54px; font-size: 16px; font-weight: 500; margin-bottom: 875px;}
 /* 메인 - MoimTalK, 안심하고 오래 함께할 수 있도록 */
+.mainPage .reliefArea > p{margin-bottom: 90px;}
+.mainPage .reliefArea ul{display: flex; justify-content: space-between; text-align: left;}
+.mainPage .reliefArea ul li{width: 22.03%; height: 200px; font-size: 16px; color: #000; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.mainPage .reliefArea ul li:nth-child(1){background-image: url('../images/main-relief01.png');}
+.mainPage .reliefArea ul li:nth-child(2){background-image: url('../images/main-relief02.png');}
+.mainPage .reliefArea ul li:nth-child(3){background-image: url('../images/main-relief03.png');}
+.mainPage .reliefArea ul li strong{display: flex; align-items: flex-start; font-size: 80px; font-weight: 800; margin-bottom: 10px;}
+.mainPage .reliefArea ul li strong::after{content: '+'; font-size: 42px;}
 /* 메인 - 고객의 동반자로서 기술 이상의 가치 */
 .mainPage .contentArea .companionArea h3{margin-bottom: 90px;}
 .mainPage .contentArea .companionArea ul{display: flex; justify-content: space-between; margin-bottom: 150px;}
