@@ -5,7 +5,7 @@
 .mainPage .contentArea img{width: 100%;}
 .mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
 /* 메인 - 상단*/
-.mainPage .contentArea{padding-top: 150px; text-align: center; position: relative; z-index: 10;}
+.mainPage .contentArea{text-align: center; position: relative; z-index: 10;}
 .mainPage .contentArea h2{margin-bottom: 30px;}
 .mainPage .contentArea h2 b{display: block; font-weight: 500; margin-bottom: 16px;}
 .mainPage .contentArea > a{width: 200px; height: 62px; font-size: 19px; font-weight: 500; margin-bottom: 40px;}
@@ -46,39 +46,67 @@
 .mainPage .contentArea .optimizationArea ul li a{width: 200px; height: 62px; font-size: 19px; font-weight: 500;}
 
 /* 서비스 */
+/* 서비스 공통 */
 .servicePage .contentArea{text-align: center;}
-.servicePage .contentArea h2{margin-bottom: 26px;}
-.servicePage .contentArea > p{font-size: 18px; font-weight: 400; color: #666666; line-height: 26px; margin-bottom: 70px;}
-.servicePage .contentArea > ul{width: 840px; margin: 0 auto; display: flex; justify-content: space-between; margin-bottom: 250px;}
-.servicePage .contentArea > ul li{width: 70px;}
-.servicePage .contentArea > ul li a{display: block; text-align: center; padding-top: 80px; background-repeat: no-repeat; background-position: center top; background-size: 60px;}
-.servicePage .contentArea > ul li:nth-child(1) a{background-image: url('../images/service-subMenu01.png');}
-.servicePage .contentArea > ul li:nth-child(2) a{background-image: url('../images/service-subMenu02.png');}
-.servicePage .contentArea > ul li:nth-child(3) a{background-image: url('../images/service-subMenu03.png');}
-.servicePage .contentArea > ul li:nth-child(4) a{background-image: url('../images/service-subMenu04.png');}
-.servicePage .contentArea > ul li:nth-child(5) a{background-image: url('../images/service-subMenu05.png');}
-.servicePage .contentArea > ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
-.servicePage .contentArea > ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
-.servicePage .contentArea section{display: flex; text-align: left;}
-.servicePage .contentArea section:not(:last-of-type){margin-bottom: 500px;}
-.servicePage .contentArea section:nth-of-type(2n + 1) .textArea{margin-right: 90px;}
-.servicePage .contentArea section:nth-of-type(2n) .textArea{order: 1; margin-left: 90px;}
-.servicePage .contentArea section .textArea{flex-shrink: 0; width: 410px;}
-.servicePage .contentArea section .textArea h3{margin-bottom: 60px;}
-.servicePage .contentArea section .textArea ol{color: #000000;}
-.servicePage .contentArea section .textArea ol li{counter-increment: olCounter;}
-.servicePage .contentArea section .textArea ol li:not(:last-child){margin-bottom: 30px;}
-.servicePage .contentArea section .textArea ol li::before{content: '0' counter(olCounter); display: block; font-size: 16px; font-weight: 700; color: #32c5f4; line-height: 19px; margin-bottom: 12px;}
-.servicePage .contentArea section .textArea ol li strong{display: block; font-size: 24px; font-weight: 500; line-height: 29px; margin-bottom: 12px;}
-.servicePage .contentArea section .textArea ol li p{font-size: 16px; font-weight: 400; line-height: 22px;}
-.servicePage .contentArea section .imgArea{flex: 1; position: relative;}
-.servicePage .contentArea section .imgArea img{position: absolute;}
-.servicePage .contentArea section .imgArea img[data-size="full"]{width: 100%;}
-.servicePage .contentArea section .imgArea img[data-size="small"]{width: 370px; z-index: 1;}
-.servicePage footer{margin-top: 150px;}
+.servicePage .contentArea section{text-align: left;}
+/* 서비스 소개 */
+.introducePage .contentArea{padding-bottom: 450px;}
+.introducePage .contentArea h2{margin-bottom: 70px;}
+.introducePage .contentArea > ul{width: 840px; margin: 0 auto; display: flex; justify-content: space-between; margin-bottom: 250px;}
+.introducePage .contentArea > ul li{width: 70px;}
+.introducePage .contentArea > ul li a{display: block; text-align: center; padding-top: 80px; background-repeat: no-repeat; background-position: center top; background-size: 60px;}
+.introducePage .contentArea > ul li:nth-child(1) a{background-image: url('../images/service-subMenu01.png');}
+.introducePage .contentArea > ul li:nth-child(2) a{background-image: url('../images/service-subMenu02.png');}
+.introducePage .contentArea > ul li:nth-child(3) a{background-image: url('../images/service-subMenu03.png');}
+.introducePage .contentArea > ul li:nth-child(4) a{background-image: url('../images/service-subMenu04.png');}
+.introducePage .contentArea > ul li:nth-child(5) a{background-image: url('../images/service-subMenu05.png');}
+.introducePage .contentArea > ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
+.introducePage .contentArea > ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
+.introducePage .contentArea section{display: flex;}
+.introducePage .contentArea section:not(:last-of-type){margin-bottom: 500px;}
+.introducePage .contentArea section:nth-of-type(2n + 1) .textArea{margin-right: 90px;}
+.introducePage .contentArea section:nth-of-type(2n) .textArea{order: 1; margin-left: 90px;}
+.introducePage .contentArea section .textArea{flex-shrink: 0; width: 410px;}
+.introducePage .contentArea section .textArea h3{margin-bottom: 60px;}
+.introducePage .contentArea section .textArea ol{color: #000000;}
+.introducePage .contentArea section .textArea ol li{counter-increment: olCounter;}
+.introducePage .contentArea section .textArea ol li:not(:last-child){margin-bottom: 30px;}
+.introducePage .contentArea section .textArea ol li::before{content: '0' counter(olCounter); display: block; font-size: 16px; font-weight: 700; color: #32c5f4; line-height: 19px; margin-bottom: 12px;}
+.introducePage .contentArea section .textArea ol li strong{display: block; font-size: 24px; font-weight: 500; line-height: 29px; margin-bottom: 12px;}
+.introducePage .contentArea section .textArea ol li p{font-size: 16px; font-weight: 400; line-height: 22px;}
+.introducePage .contentArea section .imgArea{flex: 1; position: relative;}
+.introducePage .contentArea section .imgArea img{position: absolute;}
+.introducePage .contentArea section .imgArea img[data-size="full"]{width: 100%;}
+.introducePage .contentArea section .imgArea img[data-size="small"]{width: 370px; z-index: 1;}
+.introducePage .contentArea section:nth-of-type(1) .imgArea img:nth-of-type(1){right: 0; bottom: -124px;}
+.introducePage .contentArea section:nth-of-type(1) .imgArea img:nth-of-type(2){left: -80px; top: -80px;}
+.introducePage .contentArea section:nth-of-type(2) .imgArea img:nth-of-type(1){top: -80px;}
+.introducePage .contentArea section:nth-of-type(3) .imgArea img:nth-of-type(1){right: 0; bottom: -144px;}
+.introducePage .contentArea section:nth-of-type(3) .imgArea img:nth-of-type(2){left: -65px; top: -80px;}
+.introducePage .contentArea section:nth-of-type(4) .imgArea img:nth-of-type(1){left: 0; top: -80px;}
+.introducePage .contentArea section:nth-of-type(4) .imgArea img:nth-of-type(2){right: 0; bottom: -99px;}
+.introducePage .contentArea section:nth-of-type(5) .imgArea img:nth-of-type(1){right: 0; bottom: -227px;}
+.introducePage .contentArea section:nth-of-type(5) .imgArea img:nth-of-type(2){left: -80px; top: -80px;}
+.introducePage .contentArea section:nth-of-type(6) .imgArea img:nth-of-type(1){left: 0; top: -25px;}
+.introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(1){left: -70px; bottom: -304px;}
+.introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(2){left: 26px; top: -80px;}
+.introducePage footer{margin-top: 150px;}
+
+/* 서비스 연계 */
+.linkPage .contentArea h2{margin-bottom: 27px;}
+.linkPage .contentArea > p{margin-bottom: 170px;}
+.linkPage .contentArea section{display: flex; align-items: center;}
+.linkPage .contentArea section:not(:last-of-type){margin-bottom: 240px;}
+.linkPage .contentArea section div h3{margin-bottom: 40px;}
+.linkPage .contentArea section div :is(ul , p){font-size: 16px; line-height: 22px;}
+.linkPage .contentArea .botArea div{margin-right: 29px;}
+.linkPage .contentArea .botArea div strong{display: block; font-size: 24px; font-weight: 500; line-height: 29px; margin-bottom: 12px;}
+.linkPage .contentArea .botArea img{width: 490px;}
+.linkPage .contentArea .awaremessArea div{order: 1; margin-left: 70px;}
+.linkPage .contentArea .awaremessArea img{width: 700px;}
+
 
 /* 다운로드 */
-.downloadPage .contentArea{}
 .downloadPage .contentArea h2{text-align: center; margin-bottom: 70px;}
 .downloadPage .contentArea section{height: 390px; display: flex; flex-direction: column; justify-content: center; background-repeat: no-repeat; background-position: right center; background-size: auto 100%;}
 .downloadPage .contentArea section:nth-of-type(1){background-image: url('../images/download-img01.png');}
@@ -138,7 +166,7 @@
 .inquiryPage .contentArea fieldset ul li textarea{height: 199px;}
 .inquiryPage .contentArea fieldset ul li:not(:last-child){margin-bottom: 50px;}
 .inquiryPage .contentArea fieldset > label{display: block; font-size: 16px; font-weight: 400; color: #777; margin-bottom: 80px;}
-.inquiryPage .contentArea fieldset > label span{color: #000; text-decoration: underline; text-decoration-thickness: 2px;}
-.inquiryPage .contentArea fieldset input[type="checkbox"] + label::before{content: ''; display: inline-block; width: 20px; height: 20px; background-color: red; vertical-align: text-top; margin-right: 6px;}
-.inquiryPage .contentArea fieldset input[type="checkbox"]:checked + label::before{background-color: #32c5f4;}
+.inquiryPage .contentArea fieldset > label span{color: #000; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px;}
+.inquiryPage .contentArea fieldset input[type="checkbox"] + label::before{content: ''; display: inline-block; width: 20px; height: 20px; border: 2px solid #eee; vertical-align: text-top; margin-right: 6px; box-sizing: border-box;}
+.inquiryPage .contentArea fieldset input[type="checkbox"]:checked + label::before{background: url('../images/icon-check.png') no-repeat center / cover; border: none;}
 .inquiryPage .contentArea fieldset input[type="submit"]{width: 166px; height: 62px; font-size: 19px; font-weight: 500;}
