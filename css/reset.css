@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font-family: 'Pretendard';
 	color: #191a1c;
 	vertical-align: baseline;
+	word-break: keep-all;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
