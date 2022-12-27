@@ -98,6 +98,27 @@
     .linkPage .contentArea .awaremessArea img{width: 59.32%;}
 
 
+    /* 서비스 보안 */
+    .securityPage h2{padding: 90px 0 70px; text-align: center;}
+    .securityPage .rowScroll{background-color: #32c5f4; margin-bottom: 120px; position: sticky; top: 0;}
+    .securityPage .rowScroll ul{display: flex; justify-content: center;}
+    .securityPage .rowScroll ul li:not(:last-child){margin-right: 70px;}
+    .securityPage .rowScroll ul li a{font-size: 16px; font-weight: 700; color: white; line-height: 60px;}
+    .securityPage .rowScroll ul li.active a{border-bottom: 3px solid white;}
+    .securityPage section{text-align: center;}
+    .securityPage section:not(:last-of-type){margin-bottom: 150px;}
+    .securityPage section h3{margin-bottom: 16px;}
+    .securityPage section p{font-size: 16px; line-height: 22px;}
+    .securityPage section h3 + p{margin-bottom: 90px;}
+    .securityPage .chineseWall figure{text-align: center;}
+    .securityPage .chineseWall figure img{width: 50%; margin-bottom: 40px;}
+    .securityPage .chineseWall figure figcaption{max-width: 630px; margin: 0 auto;}
+    .securityPage .chineseWall figure figcaption h4{font-size: 24px; font-weight: 500; line-height: 32px; margin-bottom: 30px;}
+    .securityPage .chineseWall figure figcaption p:not(:last-of-type){margin-bottom: 16px;}
+    .securityPage .receptionArea{background-color: #f5f6f7; padding: 150px 0;}
+    .securityPage :is(.receptionArea , .encryptionArea) img{width: 100%; margin-bottom: 40px;}
+    .securityPage :is(.receptionArea , .encryptionArea) img + p{max-width: 924px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #d4d4d4;}
+
     /* 다운로드 */
     .downloadPage .contentArea h2{text-align: center; margin-bottom: 70px;}
     .downloadPage .contentArea section{height: 390px; display: flex; flex-direction: column; justify-content: center; background-repeat: no-repeat; background-position: right center; background-size: 45%; padding-right: 416px;}

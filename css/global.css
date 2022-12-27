@@ -11,6 +11,7 @@ mark{color: #32c5f4;}
 /* 상단 공간 */
 [class *= "Page"]{padding-top: 86px;}
 [class *= "Page"] .contentArea{padding-bottom: 150px;}
+.securityPage footer{margin-top: 150px;}
 .mainPage .contentArea{padding-top: 150px;}
 .servicePage .contentArea{padding-top: 90px;}
 
