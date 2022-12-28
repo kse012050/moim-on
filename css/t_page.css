@@ -12,17 +12,22 @@
     .mainPage .contentArea > a{width: 200px; height: 62px; font-size: 19px; font-weight: 500; margin-bottom: 40px;}
     .mainPage .contentArea > p{font-size: 17px; font-weight: 400; color: #666666; line-height: 20px; margin-bottom: 257px;}
     .mainPage .contentArea > p a{text-decoration: underline; text-decoration-color: #32c5f4; text-decoration-thickness: 2px;}
-    .mainPage .contentArea > ul.menuBox{display: flex; justify-content: space-between; align-items: center;}
-    .mainPage .contentArea > ul.menuBox{width: 580px; margin: 0 auto;}
-    .mainPage .contentArea > ul li{flex-shrink: 0;}
-    .mainPage .contentArea > ul li a{padding: 0 20px; line-height: 44px; font-size: 17px; font-weight: 500; text-align: center; background-color: #eeeeee; border-radius: 10em;}
-    .mainPage .contentArea > ul li:is(.active , :hover) a{color: white; background-color: #191a1c;}
-    .mainPage .contentArea section:first-of-type{margin-top: 70px;}
     .mainPage .contentArea section:not(:last-of-type){margin-bottom: 150px;}
     /* 메인 - 조직도 연동을 통한 명확한 협업 시스템 */
-    .mainPage .contentArea .systemArea{background: url('../images/main-sysyem.png') no-repeat center top 155px / 100%;}
-    .mainPage .contentArea .systemArea p{margin-bottom: 40px;}
-    .mainPage .contentArea .systemArea > a{width: 173px; height: 54px; font-size: 16px; font-weight: 500; margin-bottom: 539px;}
+    .mainPage .contentArea .systemArea .tabBtn{width: 580px; margin: 0 auto 70px;}
+    .mainPage .contentArea .systemArea .tabBtn ul.menuBox{display: flex; justify-content: space-between; align-items: center;}
+    .mainPage .contentArea .systemArea .tabBtn ul li{flex-shrink: 0;padding: 0 20px; line-height: 44px; font-size: 17px; font-weight: 500; text-align: center; background-color: #eeeeee; border-radius: 10em; cursor: pointer;}
+    .mainPage .contentArea .systemArea .tabBtn ul li:is(.active , :hover){color: white; background-color: #191a1c;}
+    .mainPage .contentArea .systemArea .tabContents{margin-bottom: 50px;}
+    .mainPage .contentArea .systemArea .tabContents > div{display: none; background-repeat: no-repeat; background-position: center bottom; background-size: 100%; padding-bottom: 69.83%;}
+    .mainPage .contentArea .systemArea .tabContents > div.active{display: block;}
+    .mainPage .contentArea .systemArea .tabContents > div:nth-of-type(1){background-image: url('../images/main-sysyem01.png');}
+    .mainPage .contentArea .systemArea .tabContents > div:nth-of-type(2){background-image: url('../images/main-sysyem02.png');}
+    .mainPage .contentArea .systemArea .tabContents > div:nth-of-type(3){background-image: url('../images/main-sysyem03.png');}
+    .mainPage .contentArea .systemArea .tabContents > div:nth-of-type(4){background-image: url('../images/main-sysyem04.png');}
+    .mainPage .contentArea .systemArea .tabContents > div p{margin-bottom: 40px;}
+    .mainPage .contentArea .systemArea .tabContents > div > a{width: 173px; height: 54px; font-size: 16px; font-weight: 500;}
+    .mainPage .contentArea .systemArea .bannerLink{width: 100%; height: 0; padding-bottom: 11.1864%; background: url('../images/main-banner.png') no-repeat center / 100%; text-indent: -9999px;}
     /* 메인 - MoimTalK, 안심하고 오래 함께할 수 있도록 */
     .mainPage .reliefArea > p{margin-bottom: 90px;}
     .mainPage .reliefArea ul{max-width: 684px; display: flex; justify-content: space-between; text-align: left; margin: 0 auto;}

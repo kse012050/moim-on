@@ -10,6 +10,13 @@ $(document).ready(function(){
         scrollPosition = $(this).scrollTop();
     })
 
+
+    $('.tabBtn ul li').click(function(){
+        $('.tabBtn ul li').removeClass('active');
+        $(this).addClass('active');
+        $('.tabContents div').removeClass('active');
+        $('.tabContents div').eq($(this).index()).addClass('active');
+    })
   
 
     // 자주 묻는 질문
@@ -22,7 +29,7 @@ $(document).ready(function(){
     mobileMenu();
 
     function mobileMenu(){
-        $('nav').on('touchmove',function(e){
+        $('nav').on('touchmove , mousewheel',function(e){
             e.preventDefault();
         })
     
