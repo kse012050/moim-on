@@ -165,14 +165,20 @@
     /* 도입문의 */
     .inquiryPage .contentArea fieldset{max-width: 790px; width: calc(100% - 60px); margin: 0 auto; text-align: center;}
     .inquiryPage .contentArea fieldset ul{display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 80px; text-align: left;}
+    .inquiryPage .contentArea fieldset ul li{position: relative;}
     .inquiryPage .contentArea fieldset ul li label{display: block; font-size: 15px; font-weight: 500; line-height: 18px; margin-bottom: 10px;}
     .inquiryPage .contentArea fieldset ul li:has(:required) label::after{content: '*'; color: #32c5f4;}
     .inquiryPage .contentArea fieldset ul li:not(:has(textarea)){width: 48.1%;}
     .inquiryPage .contentArea fieldset ul li:has(textarea){width: 100%;}
-    .inquiryPage .contentArea fieldset ul li :is(input , select , textarea){width: 100%; height: 54px; padding: 18px; border: 1px solid #d2d2d2; border-radius: 6px; box-sizing: border-box;}
+    .inquiryPage .contentArea fieldset ul li :is(input , select , textarea , .selectBox){width: 100%; height: 54px; padding: 18px; border: 1px solid #d2d2d2; border-radius: 6px; box-sizing: border-box;}
     .inquiryPage .contentArea fieldset ul li :is(input , select , textarea)::placeholder{color: rgba(25, 26, 28, 0.3);}
-    .inquiryPage .contentArea fieldset ul li select{color: rgba(25, 26, 28, 0.3); background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px;}
-    .inquiryPage .contentArea fieldset ul li select.active{color: #191a1c;}
+    .inquiryPage .contentArea fieldset ul li select{display: none; background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px;}
+    .inquiryPage .contentArea fieldset ul li .selectBox{color: rgba(25, 26, 28, 0.3); background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px; cursor: pointer;}
+    .inquiryPage .contentArea fieldset ul li .selectBox.active{color: #191a1c;}
+    .inquiryPage .contentArea fieldset ul li .selectList{display: none; position: absolute; top: calc(100% + 10px); left: 0; width: 100%; padding: 5px; background-color: white; z-index: 1; box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%); border-radius: 15px; box-sizing: border-box; overflow: hidden;}
+    .inquiryPage .contentArea fieldset ul li .selectList div{font-size: 16px; font-weight: 400; color: #333; line-height: 44px; padding: 0 13px; border-radius: 4px; cursor: pointer;}
+    .inquiryPage .contentArea fieldset ul li .selectList div:hover{background-color: #f5f6f7;}
+    .inquiryPage .contentArea fieldset ul li select option{display: none;}
     .inquiryPage .contentArea fieldset ul li textarea{height: 199px;}
     .inquiryPage .contentArea fieldset ul li:not(:last-child){margin-bottom: 50px;}
     .inquiryPage .contentArea fieldset > label{display: block; font-size: 16px; font-weight: 400; color: #777; margin-bottom: 80px;}
