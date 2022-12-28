@@ -12,7 +12,7 @@
     [class *= "Page"] .contentArea{padding-bottom: 100px;}
     .securityPage footer{margin-top: 100px;}
     .mainPage .contentArea{padding-top: 80px;}
-    .servicePage .contentArea{padding-top: 70px;}
+    .servicePage h2{padding-top: 70px;}
 
     /* 타이틀 박스 */
     .titleBox{ height: 280px; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: 700; color: white; background: url('../images/m-titleBG.png') no-repeat center / cover; margin-bottom: 20px;}

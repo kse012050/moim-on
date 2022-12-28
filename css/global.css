@@ -23,7 +23,7 @@ mark{color: #32c5f4;}
     [class *= "Page"] .contentArea{padding-bottom: 150px;}
     .securityPage footer{margin-top: 150px;}
     .mainPage .contentArea{padding-top: 150px;}
-    .servicePage .contentArea{padding-top: 90px;}
+    .servicePage h2{padding-top: 90px;}
 
     /* 타이틀 박스 */
     .titleBox{height: 230px; display: flex; justify-content: center; align-items: center; color: white; background: url('../images/titleBG.png') no-repeat center / cover; margin-bottom: 96px;}

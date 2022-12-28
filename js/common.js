@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    const tablatSize = 1180;
 
     // 스크롤시 메뉴 
     scrollMenu();
@@ -15,9 +16,29 @@ $(document).ready(function(){
         $(window).scroll(function(e){
             $(this).scrollTop() > 0 ? $('header').addClass('background') : $('header').removeClass('background');
             $(this).scrollTop() - scrollPosition < 0 ? $('header').addClass('active') : $('header').removeClass('active')
+            $(this).scrollTop() - scrollPosition < 0 ? $('.securityPage .rowScroll').addClass('active') : $('.securityPage .rowScroll').removeClass('active')
+            $(this).scrollTop() - scrollPosition < 0 ? $('.introducePage .rowScroll').addClass('active') : $('.introducePage .rowScroll').removeClass('active')
             scrollPosition = $(this).scrollTop();
+
+            $(this).scrollTop() > $('.introducePage h2').offset().top ? $('.introducePage .rowScroll').addClass('change') : $('.introducePage .rowScroll').removeClass('change')
+            $('.introducePage div section').each(function(i){
+                if(scrollPosition + 300 > $(this).offset().top){
+                    $('.introducePage .rowScroll ul li').eq(i).addClass('active').siblings().removeClass('active');
+                }
+            })
         })
     }
+    $('.introducePage .rowScroll ul li a').click(function(e){
+        e.preventDefault();
+        let newIdx = $('.introducePage .rowScroll ul li.active').index();
+        let clickIdx = $(this).parent().index();
+        let moveTop = $('.introducePage div section').eq(clickIdx).offset().top;
+        let headerHeight = clickIdx > newIdx ? 0 : $('header').height();
+        let subMenu = $('header').height();
+        let test = tablatSize < $(window).width() ? headerHeight + subMenu + 100 : 50;
+        $('html').animate({scrollTop : moveTop - (test)});
+        
+    })
 
     // 텝 이벤트
     function tabEvent(){

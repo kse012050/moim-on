@@ -57,18 +57,18 @@
     .servicePage .contentArea{text-align: center;}
     .servicePage .contentArea section{text-align: left;}
     /* 서비스 소개 */
-    .introducePage .contentArea h2{margin-bottom: 40px;}
-    .introducePage .contentArea .rowScroll{margin-bottom: 80px; overflow: auto; height: 110px;}
-    .introducePage .contentArea .rowScroll ul{width: 600px; margin: 0 auto; display: flex; justify-content: space-between;}
-    .introducePage .contentArea .rowScroll ul li{width: 70px;}
-    .introducePage .contentArea .rowScroll ul li a{display: block; font-size: 14px; text-align: center; padding-top: 51px; background-repeat: no-repeat; background-position: center top; background-size: 43px;}
-    .introducePage .contentArea .rowScroll ul li:nth-child(1) a{background-image: url('../images/service-subMenu01.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(2) a{background-image: url('../images/service-subMenu02.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(3) a{background-image: url('../images/service-subMenu03.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(4) a{background-image: url('../images/service-subMenu04.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(5) a{background-image: url('../images/service-subMenu05.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
-    .introducePage .contentArea .rowScroll ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
+    .introducePage h2{text-align: center; margin-bottom: 40px;}
+    .introducePage .rowScroll{margin-bottom: 80px; overflow: auto; height: 110px;}
+    .introducePage .rowScroll ul{width: 600px; margin: 0 auto; display: flex; justify-content: space-between;}
+    .introducePage .rowScroll ul li{width: 70px;}
+    .introducePage .rowScroll ul li a{display: block; font-size: 14px; text-align: center; padding-top: 51px; background-repeat: no-repeat; background-position: center top; background-size: 43px;}
+    .introducePage .rowScroll ul li:nth-child(1) a{background-image: url('../images/service-subMenu01.png');}
+    .introducePage .rowScroll ul li:nth-child(2) a{background-image: url('../images/service-subMenu02.png');}
+    .introducePage .rowScroll ul li:nth-child(3) a{background-image: url('../images/service-subMenu03.png');}
+    .introducePage .rowScroll ul li:nth-child(4) a{background-image: url('../images/service-subMenu04.png');}
+    .introducePage .rowScroll ul li:nth-child(5) a{background-image: url('../images/service-subMenu05.png');}
+    .introducePage .rowScroll ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
+    .introducePage .rowScroll ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
     .introducePage .contentArea section:not(:last-of-type){margin-bottom: 150px;}
     .introducePage .contentArea section:nth-of-type(2n) .textArea{order: 1;}
     .introducePage .contentArea section .textArea{}
