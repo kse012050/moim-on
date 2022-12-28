@@ -83,17 +83,15 @@
     .introducePage .contentArea section .imgArea img[src$="02.png"]{display: none;}
 
     /* 서비스 연계 */
-    .linkPage .contentArea h2{margin-bottom: 27px;}
-    .linkPage .contentArea > p{margin-bottom: 170px;}
-    .linkPage .contentArea section{display: flex; align-items: center;}
-    .linkPage .contentArea section:not(:last-of-type){margin-bottom: 240px;}
-    .linkPage .contentArea section div h3{margin-bottom: 40px;}
-    .linkPage .contentArea section div :is(ul , p){font-size: 16px; line-height: 22px;}
+    .linkPage .contentArea h2{margin-bottom: 80px;}
+    .linkPage .contentArea > p{display: none;}
+    .linkPage .contentArea section{/* display: flex; align-items: center; */}
+    .linkPage .contentArea section:not(:last-of-type){margin-bottom: 150px;}
+    .linkPage .contentArea section div h3{margin-bottom: 30px;}
+    .linkPage .contentArea section div :is(ul , p){font-size: 15px; line-height: 22px; margin-bottom: 50px;}
+    .linkPage .contentArea section img{width: 100%; max-width: 400px;}
     .linkPage .contentArea .botArea div{margin-right: 2.45%;}
-    .linkPage .contentArea .botArea div strong{display: block; font-size: 24px; font-weight: 500; line-height: 29px; margin-bottom: 12px;}
-    .linkPage .contentArea .botArea img{width: 41.52%;}
-    .linkPage .contentArea .awaremessArea div{order: 1; margin-left: 5.93%;}
-    .linkPage .contentArea .awaremessArea img{width: 59.32%;}
+    .linkPage .contentArea .botArea div strong{display: block; font-size: 18px; font-weight: 500; line-height: 21px; margin-bottom: 23px;}
 
 
     /* 서비스 보안 */
