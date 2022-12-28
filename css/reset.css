@@ -84,3 +84,15 @@ button{background-color: transparent; border: none; cursor: pointer; padding: 0;
 
 mark{background-color: transparent; color: inherit;}
 
+/* 상세페이지 - 에디터 초기화 */
+.editor p{margin: 16px 0;}
+.editor ul{display: block; list-style-type: disc; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 40px;}
+.editor ol{display: block; list-style-type: decimal; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 40px;}
+.editor b{font-weight: bold;}
+.editor i{font-style: italic;}
+.editor a{color: -webkit-link; cursor: pointer; text-decoration: underline;}
+.editor table{display: table; box-sizing: border-box; text-indent: initial; border-spacing: 2px; border: 1px solid #ececec; width: 100%;}
+.editor table tbody{display: table-row-group; vertical-align: middle; border-color: inherit;}
+.editor table tbody tr{display: table-row; vertical-align: inherit; border-color: inherit;}
+.editor table tbody tr td{display: table-cell; vertical-align: inherit; border: 1px solid #ececec; padding: 5px 3px; text-align: center;}
+
