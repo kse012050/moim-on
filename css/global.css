@@ -9,8 +9,6 @@ mark{color: #32c5f4;}
 .btn-white{color: #191A1C; background-color: white; border: 1px solid #d2d2d2; box-sizing: border-box;}
 .btn-black{color: white; background-color: #191A1C;}
 
-/* 타이틀 박스 */
-.titleBox{height: 230px; display: flex; justify-content: center; align-items: center; color: white; background: url('../images/titleBG.png') no-repeat center / cover; margin-bottom: 96px;}
 
 @media screen and (min-width : 1181px) {
     /* 컨텐츠 크기 */
@@ -26,6 +24,9 @@ mark{color: #32c5f4;}
     .securityPage footer{margin-top: 150px;}
     .mainPage .contentArea{padding-top: 150px;}
     .servicePage .contentArea{padding-top: 90px;}
+
+    /* 타이틀 박스 */
+    .titleBox{height: 230px; display: flex; justify-content: center; align-items: center; color: white; background: url('../images/titleBG.png') no-repeat center / cover; margin-bottom: 96px;}
 
 
     /* 게시판 목록 */

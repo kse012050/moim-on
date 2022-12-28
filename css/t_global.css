@@ -13,6 +13,9 @@
     .mainPage .contentArea{padding-top: 150px;}
     .servicePage .contentArea{padding-top: 90px;}
 
+    /* 타이틀 박스 */
+    .titleBox{height: 230px; display: flex; justify-content: center; align-items: center; color: white; background: url('../images/titleBG.png') no-repeat center / cover; margin-bottom: 96px;}
+
     
     /* 게시판 목록 */
     .boradBox{display: flex; flex-wrap: wrap;}

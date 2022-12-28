@@ -13,20 +13,20 @@
     .mainPage .contentArea{padding-top: 150px;}
     .servicePage .contentArea{padding-top: 70px;}
 
+    /* 타이틀 박스 */
+    .titleBox{ height: 280px; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: 700; color: white; background: url('../images/m-titleBG.png') no-repeat center / cover; margin-bottom: 20px;}
     
     /* 게시판 목록 */
-    .boradBox{display: flex; flex-wrap: wrap;}
-    .boradBox li{width: calc((100% - 20px) / 2); border: 1px solid #eeeeee; position: relative; box-sizing: border-box;}
-    .boradBox li:not(:nth-child(2n)){margin-right: 20px;}
-    .boradBox li:not(:nth-last-child(-n + 2)){margin-bottom: 20px;}
+    .boradBox li{border: 1px solid #eeeeee; position: relative; box-sizing: border-box;}
+    .boradBox li:not(:last-child){margin-bottom: 20px;}
     .boradBox li a:first-of-type{width: 100%;}
-    .boradBox li a:first-of-type .imgArea{width: 100%; height: 200px; background-color: #eeeeee; background-repeat: no-repeat; background-position: center; background-size: cover; border-bottom: 1px solid #eee;}
-    .boradBox li a:first-of-type .textArea{min-height: 210px; display: flex; flex-direction: column; padding: 30px; box-sizing: border-box;}
-    .boradBox li a:first-of-type .textArea > mark{font-size: 15px; font-weight: 700; margin-bottom: 10px;}
-    .boradBox li a:first-of-type .textArea strong{font-size: 20px; font-weight: 500; margin-bottom: 12px;}
-    .boradBox li a:first-of-type .textArea p{font-size: 15px; color: #666666; line-height: 22px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
-    .boradBox li a:first-of-type .textArea time{font-size: 14px; color: #b6b9bc; margin-top: auto;}
-    .boradBox li a[data-type="download"]{font-weight: 700; position: absolute; left: 30px; bottom: 30px;}
+    .boradBox li a:first-of-type .imgArea{width: 100%; height: 187px; background-color: #eeeeee; background-repeat: no-repeat; background-position: center; background-size: cover; border-bottom: 1px solid #eee;}
+    .boradBox li a:first-of-type .textArea{min-height: 187px; display: flex; flex-direction: column; padding: 26px; box-sizing: border-box;}
+    .boradBox li a:first-of-type .textArea > mark{font-size: 14px; font-weight: 700; margin-bottom: 10px;}
+    .boradBox li a:first-of-type .textArea strong{font-size: 17px; font-weight: 500; margin-bottom: 10px;}
+    .boradBox li a:first-of-type .textArea p{font-size: 14px; color: #666666; line-height: 20px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+    .boradBox li a:first-of-type .textArea time{font-size: 13px; color: #b6b9bc; margin-top: auto;}
+    .boradBox li a[data-type="download"]{font-size: 15px; font-weight: 700; position: absolute; left: 26px; bottom: 26px;}
 
     /* 해더 */
     header{position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; transform: translateY(-100%); transition: 0.5s;}
