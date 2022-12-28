@@ -134,6 +134,7 @@
 
 
     /* 다운로드 */
+    .downloadPage .contentArea{padding-top: 90px;}
     .downloadPage .contentArea h2{text-align: center; margin-bottom: 70px;}
     .downloadPage .contentArea section{height: 390px; display: flex; flex-direction: column; justify-content: center; background-repeat: no-repeat; background-position: right center; background-size: auto 100%;}
     .downloadPage .contentArea section:nth-of-type(1){background-image: url('../images/download-img01.png');}
