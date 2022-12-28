@@ -1,6 +1,18 @@
 @media screen and (min-width : 768px) and (max-width : 1180px) {
     /* 컨텐츠 크기 */
     .contentSize{max-width: 1180px; width: calc(100% - 60px); margin: 0 auto;}
+
+    /* 타이틀 */
+    h2{font-size: 42px; font-weight: 700; line-height: 50px;}
+    h3{font-size: 36px; font-weight: 500; line-height: 43px;}
+
+    /* 상단 공간 */
+    [class *= "Page"]{padding-top: 86px;}
+    [class *= "Page"] .contentArea{padding-bottom: 150px;}
+    .securityPage footer{margin-top: 150px;}
+    .mainPage .contentArea{padding-top: 150px;}
+    .servicePage .contentArea{padding-top: 90px;}
+
     
     /* 게시판 목록 */
     .boradBox{display: flex; flex-wrap: wrap;}

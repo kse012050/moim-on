@@ -65,6 +65,7 @@
     .introducePage .contentArea .rowScroll ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
     .introducePage .contentArea .rowScroll ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
     .introducePage .contentArea section{display: flex;}
+    .introducePage .contentArea section .mobileImg{display: none;}
     .introducePage .contentArea section:not(:last-of-type){margin-bottom: 500px;}
     .introducePage .contentArea section:nth-of-type(2n + 1) .textArea{margin-right: 7.62%;}
     .introducePage .contentArea section:nth-of-type(2n) .textArea{order: 1; margin-left: 7.62%;}
