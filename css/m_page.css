@@ -1,12 +1,30 @@
 @media screen and (max-width : 767px){
     /* 메인 */
     /* 메인 공통 */
+    .mainPage{position: relative; overflow: hidden;}
     .mainPage .BG{position: relative; background: url('../images/main-moimOn.png') no-repeat center top 250px / calc(100% + 70px); overflow: hidden;}
-    .mainPage .BG .BGArea{position: absolute; left: 50%; top: 0; width: calc(100% + 188px); height: 100%; transform: translateX(-50%); transition: 0.5s;}
-    .mainPage .BG .BGArea img{position: absolute;}
-    .mainPage .BG .BGArea img:nth-child(1){width: 158px; left: 0; top: 0;}
-    .mainPage .BG .BGArea img:nth-child(2){width: 209px; right: 0; top: 134px;}
-    .mainPage .BG .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; mix-blend-mode: difference; z-index: 1;}
+    .mainPage .BGArea{position: absolute; left: 50%; top: 0; width: 550px; height: 100%; transform: translateX(-50%); transition: 0.5s;}
+    .mainPage .BGArea img{position: absolute;}
+    .mainPage .BGArea img:nth-child(1){width: 158px; left: 0; top: 56px;}
+    .mainPage .BGArea img:nth-child(2){width: 209px; right: 0; top: 194px;}
+    .mainPage .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; mix-blend-mode: difference; z-index: 1;
+        animation-name: float; animation-duration: calc(var(--i ) * 2s); animation-timing-function: cubic-bezier(.1,.1,.88,.88); animation-iteration-count: infinite;}
+    .mainPage .BGArea .circle:nth-of-type(2n){animation-direction: reverse;}
+    .mainPage .BGArea .circle:nth-of-type(1){width: 40px; height: 40px; top: 65px; right: 155px;}
+    .mainPage .BGArea .circle:nth-of-type(2){width: 31px; height: 31px; top: 270px; left: 150px;}
+    .mainPage .BGArea .circle:nth-of-type(3){width: 82px; height: 82px; top: 464px; left: 280px;}
+    .mainPage .BGArea .circle:nth-of-type(n + 4){display: none;}
+    @keyframes float {
+        0% {
+          transform: translate(0,0) rotate(0deg);
+        }
+        50% {
+          transform: translate(0,calc(var(--i ) * 20px));
+        }
+        100% {
+          transform: translate(0,0) rotate(360deg);
+        }
+    }
     .mainPage .contentArea img{width: 100%;}
     .mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
     /* 메인 - 상단*/
@@ -18,8 +36,8 @@
     .mainPage .contentArea > p a{font-weight: 700; text-decoration: underline; text-decoration-color: #32c5f4; text-decoration-thickness: 2px;}
     .mainPage .contentArea section:not(:last-of-type){margin-bottom: 80px;}
     /* 메인 - 조직도 연동을 통한 명확한 협업 시스템 */
-    .mainPage .contentArea .systemArea .tabBtn{max-width: 580px; margin: 0 auto 60px; overflow: auto;}
-    .mainPage .contentArea .systemArea .tabBtn ul.menuBox{width: 580px; display: flex; justify-content: space-between; align-items: center;}
+    .mainPage .contentArea .systemArea .tabBtn{max-width: 640px; margin: 0 auto 60px; overflow: auto;}
+    .mainPage .contentArea .systemArea .tabBtn ul.menuBox{width: 580px; display: flex; justify-content: space-between; align-items: center; padding: 0 30px;}
     .mainPage .contentArea .systemArea .tabBtn ul li{flex-shrink: 0; padding: 0 20px; line-height: 44px; font-size: 17px; font-weight: 500; text-align: center; background-color: #eeeeee; border-radius: 10em; cursor: pointer;}
     .mainPage .contentArea .systemArea .tabBtn ul li:is(.active , :hover){color: white; background-color: #191a1c;}
     .mainPage .contentArea .systemArea .tabContents{margin-bottom: 50px;}
@@ -51,6 +69,7 @@
     .mainPage .contentArea .companionArea ul li:nth-child(2){background-image: url('../images/main-companion-prize02.png');}
     .mainPage .contentArea .companionArea ul li:nth-child(3){background-image: url('../images/main-companion-prize03.png');}
     .mainPage .contentArea .companionArea ul li:nth-child(4){background-image: url('../images/main-companion-prize04.png');}
+    .mainPage .contentArea .companionArea .companionImg{padding-bottom: 163%; background: transparent url('../images/m-main-companion.png') no-repeat center / cover; height: 0.1px; overflow: hidden; text-indent: -9999px;}
     /* 메인 - 지금 바로, MoimOn/MoimTalk을 만나보세요 */
     .mainPage .contentArea .optimizationArea h3{margin-bottom: 40px;}
     .mainPage .contentArea .optimizationArea ul{display: flex; flex-wrap: wrap; justify-content: center; gap: 15px 20px;}
@@ -62,9 +81,9 @@
     .servicePage .contentArea section{text-align: left;}
     /* 서비스 소개 */
     .introducePage h2{text-align: center; margin-bottom: 40px;}
-    .introducePage .rowScroll{margin-bottom: 80px; overflow: auto; height: 110px; position: sticky; top: 0; background-color: white; transition: top 0.5s; z-index: 10; transition: 0.5s;}
+    .introducePage .rowScroll{overflow: auto; height: 110px; position: sticky; top: 0; background-color: white; transition: top 0.5s; z-index: 10; transition: 0.5s;}
     .introducePage .rowScroll.active{top: 60px;}
-    .introducePage .rowScroll ul{width: 600px; margin: 0 auto; display: flex; justify-content: space-between; transition: 0.5s;}
+    .introducePage .rowScroll ul{width: 800px; margin: 0 auto; display: flex; justify-content: space-between; transition: 0.5s; padding: 0 30px;}
     .introducePage .rowScroll ul li{width: 70px; transition: 0.5s;}
     .introducePage .rowScroll ul li a{display: block; font-size: 14px; text-align: center; padding-top: 51px; background-repeat: no-repeat; background-position: center top; background-size: 43px; transition: 0.5s;}
     .introducePage .rowScroll ul li:nth-child(1) a{background-image: url('../images/service-subMenu01.png');}
@@ -75,14 +94,14 @@
     .introducePage .rowScroll ul li:nth-child(6) a{background-image: url('../images/service-subMenu06.png');}
     .introducePage .rowScroll ul li:nth-child(7) a{background-image: url('../images/service-subMenu07.png');}
     .introducePage .rowScroll.change{background-color: #32c5f4; height: auto;}
-    .introducePage .rowScroll.change ul{justify-content: center; align-items: center;}
+    .introducePage .rowScroll.change ul{justify-content: center; align-items: center; width: 720px;}
     .introducePage .rowScroll.change ul li{width: auto;}
-    .introducePage .rowScroll.change ul li:not(:last-child){margin-right: 70px;}
-    .introducePage .rowScroll.change ul li a{color: white; background: none; padding: 0; line-height: 60px; position: relative;}
+    .introducePage .rowScroll.change ul li:not(:last-child){margin-right: 60px;}
+    .introducePage .rowScroll.change ul li a{color: white; font-size: 16px; font-weight: 700; background: none; padding: 0; line-height: 60px; position: relative;}
     .introducePage .rowScroll.change ul li.active a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background-color: white;}
-    .introducePage .contentArea section:not(:last-of-type){margin-bottom: 150px;}
+    .introducePage .contentArea section:first-of-type{padding-top: 150px;}
+    .introducePage .contentArea section:not(:first-of-type){padding-top: 150px;}
     .introducePage .contentArea section:nth-of-type(2n) .textArea{order: 1;}
-    .introducePage .contentArea section .textArea{}
     .introducePage .contentArea section .textArea h3{margin-bottom: 30px;}
     .introducePage .contentArea section .textArea .mobileImg{margin-bottom: 12px;}
     .introducePage .contentArea section .textArea .mobileImg img{width: 100%;}
@@ -114,8 +133,8 @@
     .securityPage h2{padding: 70px 0 80px; text-align: center;}
     .securityPage .rowScroll{background-color: #32c5f4; margin-bottom: 120px; overflow: auto; position: sticky; top: 0; transition: top 0.5s;}
     .securityPage .rowScroll.active{top: 60px;}
-    .securityPage .rowScroll ul{display: flex; justify-content: center; width: 493px; margin: 0 auto;}
-    .securityPage .rowScroll ul li:not(:last-child){margin-right: 70px;}
+    .securityPage .rowScroll ul{display: flex; justify-content: center; width: 365px; margin: 0 auto; padding: 0 30px;}
+    .securityPage .rowScroll ul li:not(:last-child){margin-right: 60px;}
     .securityPage .rowScroll ul li a{font-size: 16px; font-weight: 700; color: white; line-height: 60px;}
     .securityPage .rowScroll ul li.active a{border-bottom: 3px solid white;}
     .securityPage > div section{text-align: center;}
@@ -161,7 +180,8 @@
 
     /* 자주 묻는 질문 */
     .FAQPage .contentArea ul li{box-shadow: inset 0 -1px 0 0 #eee;}
-    .FAQPage .contentArea ul li button{width: 100%; display: flex; justify-content: start; align-items: flex-start; font-size: 17px; font-weight: 700; color: #000; line-height: 24px; text-align: left; padding: 30px 16px;}
+    .FAQPage .contentArea ul li button{width: 100%; display: flex; justify-content: start; align-items: flex-start; font-size: 17px; font-weight: 400; color: #000; line-height: 24px; text-align: left; padding: 30px 16px;}
+    .FAQPage .contentArea ul li button.active{font-weight: 700;}
     .FAQPage .contentArea ul li button::before{content: 'Q.'; font-size: 21px;}
     .FAQPage .contentArea ul li button::after{content: ''; flex-shrink: 0; align-self: center; width: 36px; height: 36px; background: url('../images/icon-open.png') no-repeat center / cover; margin-left: auto; transform: rotate(180deg); transition: transform 0.5s; margin-right: 10px;}
     .FAQPage .contentArea ul li button.active::after{transform: rotate(0);}
@@ -176,7 +196,7 @@
     .inquiryPage .contentArea fieldset ul li label{display: block; font-size: 14px; font-weight: 500; line-height: 18px; margin-bottom: 11px;}
     .inquiryPage .contentArea fieldset ul li:has(:required) label::after{content: '*'; color: #32c5f4;}
     .inquiryPage .contentArea fieldset ul li :is(input , select , .selectBox){height: 54px;}
-    .inquiryPage .contentArea fieldset ul li :is(input , select , textarea , .selectBox){width: 100%; padding: 18px; border: 1px solid #d2d2d2; border-radius: 6px; box-sizing: border-box;}
+    .inquiryPage .contentArea fieldset ul li :is(input , select , textarea , .selectBox){width: 100%; padding: 18px; border: 1px solid #d2d2d2; border-radius: 6px; box-sizing: border-box; outline-color: black;}
     .inquiryPage .contentArea fieldset ul li :is(input , select , textarea)::placeholder{color: rgba(25, 26, 28, 0.3);}
     .inquiryPage .contentArea fieldset ul li select{display: none; background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px;}
     .inquiryPage .contentArea fieldset ul li .selectBox{color: rgba(25, 26, 28, 0.3); background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px; cursor: pointer;}
@@ -191,5 +211,5 @@
     .inquiryPage .contentArea fieldset > label span{color: #000; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px;}
     .inquiryPage .contentArea fieldset input[type="checkbox"] + label::before{content: ''; display: inline-block; width: 20px; height: 20px; border: 2px solid #eee; vertical-align: text-top; margin-right: 6px; box-sizing: border-box;}
     .inquiryPage .contentArea fieldset input[type="checkbox"]:checked + label::before{background: url('../images/icon-check.png') no-repeat center / cover; border: none;}
-    .inquiryPage .contentArea fieldset input[type="submit"]{width: 164px; height: 54px; font-size: 18px; font-weight: 500;}
+    .inquiryPage .contentArea fieldset input[type="submit"]{width: 164px; height: 54px; font-size: 18px; font-weight: 500; border: none;}
 }

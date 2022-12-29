@@ -3,7 +3,7 @@ $(document).ready(function(){
     const tablatSize = 1180;
 
     // 메인 페이지 애니메이션
-    $('.mainPage').length && mainCircleAni();
+    // $('.mainPage').length && mainCircleAni();
 
     // 스크롤시 메뉴 
     scrollMenu();
@@ -75,13 +75,22 @@ $(document).ready(function(){
 
     function scrollMenu(){
         let scrollPosition = $(window).scrollTop();
+        if(scrollPosition > 0 ){
+            $('header').addClass('active');
+            $('header').addClass('background');
+            $('.introducePage').length && $('.introducePage .rowScroll').addClass('change' , 'active');
+        }
         // 스크롤 메뉴 배경
         $(window).scroll(function(e){
             $(this).scrollTop() > 0 ? $('header').addClass('background') : $('header').removeClass('background');
-            $(this).scrollTop() - scrollPosition < 0 ? $('header').addClass('active') : $('header').removeClass('active')
+            if($(this).scrollTop() > 0){
+                $(this).scrollTop() - scrollPosition < 0 ? $('header').addClass('active') : $('header').removeClass('active')
+            }
             $(this).scrollTop() - scrollPosition < 0 ? $('.securityPage .rowScroll').addClass('active') : $('.securityPage .rowScroll').removeClass('active')
             $(this).scrollTop() - scrollPosition < 0 ? $('[data-scroll="click"]').addClass('active') : $('[data-scroll="click"]').removeClass('active')
             scrollPosition = $(this).scrollTop();
+
+            $(this).scrollTop()  > $(document).height() - $(window).height() - $('footer').innerHeight() ? $('.floatingLink').addClass('stop') : $('.floatingLink').removeClass('stop');
         })
     }
     
@@ -153,7 +162,7 @@ $(document).ready(function(){
     function FAQDropdown(){
         $('.FAQPage .contentArea ul li button').click(function(){
             $(this).toggleClass('active');
-            $(this).stop().next().slideToggle();
+            $(this).stop().next().slideToggle().css('display','flex');
         })
     }
 

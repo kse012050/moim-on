@@ -19,7 +19,7 @@ mark{color: #32c5f4;}
     h3{font-size: 36px; font-weight: 500; line-height: 43px;}
 
     /* 상단 공간 */
-    [class *= "Page"]{padding-top: 86px;}
+    [class *= "Page"]{padding-top: 86px; position: relative;}
     [class *= "Page"] .contentArea{padding-bottom: 150px;}
     .securityPage footer{margin-top: 150px;}
     .mainPage .contentArea{padding-top: 150px;}
@@ -72,6 +72,7 @@ mark{color: #32c5f4;}
     footer P:not(:last-of-type){padding-right: 5px; border-right: 1px solid #b6b9bc; margin-right: 5px;}
 
     /* 플로팅 링크 */
-    .floatingLink{position: fixed; right: 40px; bottom: 190px; width: 173px; height: 62px; font-size: 19px; font-weight: 900; z-index: 100; border-radius: 10em; display: inline-flex; justify-content: center; align-items: center; color: white; background-color: #191A1C;}
+    .floatingLink{position: fixed; right: 40px; bottom: 40px; width: 173px; height: 62px; font-size: 19px; font-weight: 900; z-index: 100; border-radius: 10em; display: inline-flex; justify-content: center; align-items: center; color: white; background-color: #191A1C;}
+    .floatingLink.stop{position: absolute; bottom: 160px;}
     
 }

@@ -61,5 +61,5 @@
 
     /* 플로팅 링크 */
     .floatingLink{position: fixed; left: 30px; right: 30px; bottom: 10px; height: 52px; font-size: 16px; font-weight: 700; z-index: 100; display: inline-flex; justify-content: center; align-items: center; color: white; background-color: #32c5f4; border-radius: 8px;}
-
+    .floatingLink.stop{position: absolute; bottom: 140px;}
 }

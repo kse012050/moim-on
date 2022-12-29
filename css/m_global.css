@@ -44,7 +44,7 @@
     header > div button.menu-close{height: 24px; background-image: url('../images/m-icon-close.png');}
     header > div nav{display: none; position: fixed; right: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);  z-index: 1;}
     header > div nav > div{width: 220px; height: 100%; background-color: white; padding: 20px; margin-left: auto; display: flex; justify-content: flex-start; flex-direction: column; box-sizing: border-box;}
-    header > div nav > div ul{flex: 1; display: flex; flex-direction: column; justify-content: center;}
+    header > div nav > div ul{flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 60px;}
     header > div nav > div ul li:not(:last-child){margin-bottom: 50px;}
     header > div nav > div ul li > a{display: block; font-size: 17px; line-height: 20px; font-weight: 500;}
     header > div nav > div ul li a:only-child{ background: url('../images/m-icon-more.png') no-repeat right center / 14px;}
@@ -62,5 +62,6 @@
 
     /* 플로팅 링크 */
     .floatingLink{position: fixed; left: 30px; right: 30px; bottom: 20px; height: 52px; font-size: 16px; font-weight: 700; z-index: 100; display: inline-flex; justify-content: center; align-items: center; color: white; background-color: #32c5f4; border-radius: 8px;}
-    .floatingLink + footer{height: 145px;}
+    /* .floatingLink + footer{height: 145px;} */
+    .floatingLink.stop{position: absolute; bottom: 140px;}
 }
