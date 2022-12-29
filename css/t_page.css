@@ -6,7 +6,7 @@
     .mainPage .BG .BGArea img{position: absolute;}
     .mainPage .BG .BGArea img:nth-child(1){width: 404px; left: 0; top: 133px;}
     .mainPage .BG .BGArea img:nth-child(2){width: 490px; right: 0; top: 317px;}
-    .mainPage .BG .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; }
+    .mainPage .BG .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; mix-blend-mode: difference; z-index: 1;}
     .mainPage .contentArea img{width: 100%;}
     .mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
     /* 메인 - 상단*/

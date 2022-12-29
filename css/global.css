@@ -41,7 +41,8 @@ mark{color: #32c5f4;}
     .boradBox li a:first-of-type .textArea strong{font-size: 20px; font-weight: 500; margin-bottom: 12px;}
     .boradBox li a:first-of-type .textArea p{font-size: 15px; color: #666666; line-height: 22px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
     .boradBox li a:first-of-type .textArea time{font-size: 14px; color: #b6b9bc; margin-top: auto;}
-    .boradBox li a[data-type="download"]{font-weight: 700; position: absolute; left: 30px; bottom: 30px;}
+    .boradBox li a[data-type="download"]{font-weight: 700; position: absolute; left: 30px; bottom: 30px; display: flex; align-items: center;}
+    .boradBox li a[data-type="download"]::after{content: ''; width: 16px; height: 16px; background: url('../images/icon-download.png') no-repeat center / cover; margin-left: 6px;}
 
     /* 해더 */
     header{position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; transform: translateY(-100%); transition: 0.5s;}

@@ -27,7 +27,9 @@
     .boradBox li a:first-of-type .textArea strong{font-size: 17px; font-weight: 500; margin-bottom: 10px;}
     .boradBox li a:first-of-type .textArea p{font-size: 14px; color: #666666; line-height: 20px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
     .boradBox li a:first-of-type .textArea time{font-size: 13px; color: #b6b9bc; margin-top: auto;}
-    .boradBox li a[data-type="download"]{font-size: 15px; font-weight: 700; position: absolute; left: 26px; bottom: 26px;}
+    .boradBox li a[data-type="download"]{font-size: 15px; font-weight: 700; position: absolute; left: 26px; bottom: 26px; display: flex; align-items: center;}
+    .boradBox li a[data-type="download"]::after{content: ''; width: 15px; height: 15px; background: url('../images/icon-download.png') no-repeat center / cover; margin-left: 3px;}
+    
 
     /* 해더 */
     header{position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; transform: translateY(-100%); transition: 0.5s;}

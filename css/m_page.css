@@ -6,7 +6,7 @@
     .mainPage .BG .BGArea img{position: absolute;}
     .mainPage .BG .BGArea img:nth-child(1){width: 158px; left: 0; top: 0;}
     .mainPage .BG .BGArea img:nth-child(2){width: 209px; right: 0; top: 134px;}
-    .mainPage .BG .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; }
+    .mainPage .BG .BGArea .circle{position: absolute; border-radius: 100%; background: url('../images/main-circle.png') no-repeat center / cover; mix-blend-mode: difference; z-index: 1;}
     .mainPage .contentArea img{width: 100%;}
     .mainPage .contentArea h3 + p{font-size: 16px; line-height: 22px; margin-top: 16px;}
     /* 메인 - 상단*/
@@ -165,7 +165,7 @@
     .FAQPage .contentArea ul li button::before{content: 'Q.'; font-size: 21px;}
     .FAQPage .contentArea ul li button::after{content: ''; flex-shrink: 0; align-self: center; width: 36px; height: 36px; background: url('../images/icon-open.png') no-repeat center / cover; margin-left: auto; transform: rotate(180deg); transition: transform 0.5s; margin-right: 10px;}
     .FAQPage .contentArea ul li button.active::after{transform: rotate(0);}
-    .FAQPage .contentArea ul li div{display: none; font-size: 17px; font-weight: 400; color: #666; line-height: 24px;  padding: 40px 20px; background-color: #eeeeee; box-sizing: border-box;}
+    .FAQPage .contentArea ul li div{display: none; font-size: 17px; font-weight: 400; color: #666; line-height: 24px;  padding: 30px 20px; background-color: #eeeeee; box-sizing: border-box;}
     .FAQPage .contentArea ul li div::before{content: 'A.'; font-size: 21px; color: rgba(0, 0, 0, 0.3); vertical-align: middle;}
     .FAQPage .contentArea ul li > *::before{font-size: 24px; font-weight: 700; margin-right: 19px;}
 

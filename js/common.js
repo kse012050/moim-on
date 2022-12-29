@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    const mobileSize = 767;
     const tablatSize = 1180;
 
     // 메인 페이지 애니메이션
@@ -28,9 +29,17 @@ $(document).ready(function(){
         }
 
         $('.mainPage .BG .BGArea .circle').each(function(){
-            let size = (Math.random() * 560) + 45
-            let positonLeft = Math.random() * $(this).parent().width();
-            let positonTop = Math.random() * $(this).parent().height();
+            let size;
+            if($(window).width() > tablatSize){
+                size = (Math.random() * 560) + 45
+            }else if($(window).width() > mobileSize){
+                size = (Math.random() * 360) + 45
+            }else{
+                size = (Math.random() * 160) + 45
+            }
+
+            let positonLeft = Math.random() * ($(this).parent().width() - size);
+            let positonTop = Math.random() * ($(this).parent().height() - size);
             $(this).css({
                 'width' : size,
                 'height' : size,
@@ -73,8 +82,6 @@ $(document).ready(function(){
             $(this).scrollTop() - scrollPosition < 0 ? $('.securityPage .rowScroll').addClass('active') : $('.securityPage .rowScroll').removeClass('active')
             $(this).scrollTop() - scrollPosition < 0 ? $('[data-scroll="click"]').addClass('active') : $('[data-scroll="click"]').removeClass('active')
             scrollPosition = $(this).scrollTop();
-
-            
         })
     }
     
@@ -97,9 +104,9 @@ $(document).ready(function(){
             let clickIdx = $(this).parent().index();
             let moveTop = $('[data-scroll="location"] section').eq(clickIdx).offset().top;
             let headerHeight = clickIdx > newIdx ? 0 : $('header').height();
-            let subMenu = $('header').height();
-            let test = tablatSize < $(window).width() ? headerHeight + subMenu + 100 : 50;
-            $('html').animate({scrollTop : moveTop - (test)});
+            let subMenu = $('[data-scroll="click"]').height();
+            let test = tablatSize < $(window).width() ? 100 : 50;
+            $('html').stop().animate({scrollTop : moveTop - (headerHeight + subMenu + test)});
             
         })
     }
