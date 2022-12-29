@@ -1,6 +1,9 @@
 $(document).ready(function(){
     const tablatSize = 1180;
 
+    // 메인 페이지 애니메이션
+    $('.mainPage').length && mainCircleAni();
+
     // 스크롤시 메뉴 
     scrollMenu();
 
@@ -17,6 +20,46 @@ $(document).ready(function(){
     mobileMenu();
     // 도입문의 셀렉트
     inquirySelect();
+
+    function mainCircleAni(){
+        let mainBGCircleCount = 6;
+        for(let a = 0; a < mainBGCircleCount; a++){
+            $('.mainPage .BG .BGArea').append('<div class="circle"></div>');
+        }
+
+        $('.mainPage .BG .BGArea .circle').each(function(){
+            let size = (Math.random() * 560) + 45
+            let positonLeft = Math.random() * $(this).parent().width();
+            let positonTop = Math.random() * $(this).parent().height();
+            $(this).css({
+                'width' : size,
+                'height' : size,
+                'left' : positonLeft,
+                'top' : positonTop
+            })
+        })
+
+        $('.mainPage .BG .BGArea .circle').each(function(){
+            let selector = $(this);
+            let parentSelector = $(this).parent();
+            let moveX = (Math.random() * 1) - 0.5
+            let moveY = (Math.random() * 1) - 0.5
+            let rotate = 0;
+            setInterval(function(){
+                let selectorX = parseFloat(selector.css('left'));
+                let selectorY = parseFloat(selector.css('top'));
+                rotate++;
+                rotate > 360 && (rotate = 0);
+                (selectorX <= 0 || selectorX > (parentSelector.width() - selector.width())) && (moveX = -moveX);
+                (selectorY <= 0 || selectorY > (parentSelector.height() - selector.height())) && (moveY = -moveY);
+                selector.css({
+                    'left' : selectorX + moveX,
+                    'top' : selectorY - moveY,
+                    'transform' : `rotate(${rotate}deg)`
+                })
+            },10)
+        })
+    }
 
 
     $('.inquiryPage').length && inputValidity();
@@ -211,12 +254,15 @@ $(document).ready(function(){
                 // 필수X
                 // contentOfInquiry : 문의 내용
                 // agree만 boolean 나머지는 String ''
-
-                // submit 기본값 막기 form 태그 이용해서 데이터 넘길 시 제거
-                e.preventDefault();
             }else{
                 // 필수 항목이 하나라도 false면 submit 동작 막기
                 e.preventDefault();
+
+                // 유효성 검사 실패한 input 중 첫번째 input focus
+                let focusInput = inputValue.find((v)=>{
+                    return !v.boolean
+                })
+                focusInput.selector.focus();
             }
         })
     }
