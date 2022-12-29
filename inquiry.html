@@ -51,36 +51,36 @@
                     <ul>
                         <li>
                             <label for="userName">이름</label>
-                            <input type="text" id="userName" placeholder="이름을 입력해주세요" required>
+                            <input type="text" id="userName" placeholder="이름을 입력해주세요" required data-input="text">
                         </li>
                         <li>
                             <label for="companyName">회사명</label>
-                            <input type="text" id="companyName" placeholder="회사명을 입력해주세요" required>
+                            <input type="text" id="companyName" placeholder="회사명을 입력해주세요" required data-input="text">
                         </li>
                         <li>
                             <label for="userMobile">전화번호</label>
-                            <input type="text" id="userMobile" placeholder="전화번호를 입력해주세요" required>
+                            <input type="text" id="userMobile" placeholder="전화번호를 입력해주세요" required maxlength="11" data-input="mobile">
                         </li>
                         <li>
                             <label for="userEmail">이메일</label>
-                            <input type="text" id="userEmail" placeholder="회사 이메일을 입력해주세요" required>
+                            <input type="email" id="userEmail" placeholder="회사 이메일을 입력해주세요" required data-input="email">
                         </li>
                         <li>
                             <label for="userRank">직급</label>
-                            <input type="text" id="userRank" placeholder="직급을 입력해주세요" required>
+                            <input type="text" id="userRank" placeholder="직급을 입력해주세요" required data-input="text">
                         </li>
                         <li>
                             <label for="userDepartment">부서</label>
-                            <input type="text" id="userDepartment" placeholder="부서를 입력해주세요" required>
+                            <input type="text" id="userDepartment" placeholder="부서를 입력해주세요" required data-input="text">
                         </li>
                         <li>
                             <label for="inquiryType">문의유형</label>
-                            <select id="inquiryType" required>
-                                <option value="" disabled selected hidden>문의유형을 선택해주세요</option>
-                                <option value="">??</option>
-                                <option value="">??</option>
-                                <option value="">??</option>
-                                <option value="">??</option>
+                            <select id="inquiryType" required data-input="select">
+                                <option value="">문의유형을 선택해주세요</option>
+                                <option value="1">??</option>
+                                <option value="2">??</option>
+                                <option value="3">??</option>
+                                <option value="4">??</option>
                             </select>
                             <div class="selectBox">
                             </div>
@@ -89,12 +89,12 @@
                         </li>
                         <li>
                             <label for="numberOfEmployees">사원수</label>
-                            <select id="numberOfEmployees" required>
+                            <select id="numberOfEmployees" required data-input="select">
                                 <option value="">사원수를 선택해주세요</option>
-                                <option value="">10-50명</option>
-                                <option value="">100-500명</option>
-                                <option value="">500-1000명</option>
-                                <option value="">1000명 이상</option>
+                                <option value="1">10-50명</option>
+                                <option value="2">100-500명</option>
+                                <option value="3">500-1000명</option>
+                                <option value="4">1000명 이상</option>
                             </select>
                             <div class="selectBox">
                             </div>
@@ -106,7 +106,7 @@
                             <textarea id="contentOfInquiry" placeholder="문의내용을 입력해주세요"></textarea>
                         </li>
                     </ul>
-                    <input type="checkbox" id="agree">
+                    <input type="checkbox" id="agree" data-input="checkbox">
                     <label for="agree">
                         <span>이용약관</span> 과 <span>개인정보 정책</span>에 동의합니다.(필수)
                     </label>
