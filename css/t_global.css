@@ -7,7 +7,7 @@
     h3{font-size: 36px; font-weight: 500; line-height: 43px;}
 
     /* 상단 공간 */
-    [class *= "Page"]{padding-top: 86px;}
+    [class *= "Page"]{padding-top: 86px; position: relative;}
     [class *= "Page"] .contentArea{padding-bottom: 150px;}
     .securityPage footer{margin-top: 150px;}
     .mainPage .contentArea{padding-top: 150px;}

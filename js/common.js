@@ -114,7 +114,12 @@ $(document).ready(function(){
             let moveTop = $('[data-scroll="location"] section').eq(clickIdx).offset().top;
             let headerHeight = clickIdx > newIdx ? 0 : $('header').height();
             let subMenu = $('[data-scroll="click"]').height();
-            let test = tablatSize < $(window).width() ? 100 : 50;
+            let test = 0;
+            if($('.introducePage').length){
+                test = (tablatSize < $(window).width() ? -100 : -100);
+            }else{
+                test = (tablatSize < $(window).width() ? 100 : 50);
+            }
             $('html').stop().animate({scrollTop : moveTop - (headerHeight + subMenu + test)});
             
         })

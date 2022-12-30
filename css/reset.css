@@ -59,7 +59,7 @@ html {
    -o-text-size-adjust: none; /*old versions of Opera*/
 }
 /* Iphone input select box reset */
-input , select{-webkit-appearance: none; -webkit-border-radius:0; font: inherit;}
+input , select{-webkit-appearance: none; /* -webkit-border-radius:0; */ font: inherit;}
 
 /* textarea */
 textarea{resize: none; font: inherit;}

@@ -8,7 +8,7 @@
     h3{font-size: 22px; font-weight: 500; line-height: 30px;}
 
     /* 상단 공간 */
-    [class *= "Page"]{padding-top: 60px;}
+    [class *= "Page"]{padding-top: 60px; position: relative;}
     [class *= "Page"] .contentArea{padding-bottom: 100px;}
     .securityPage footer{margin-top: 100px;}
     .mainPage .contentArea{padding-top: 80px;}
@@ -51,7 +51,7 @@
     header > div nav > div ul li > div{margin-top: 30px;}
     header > div nav > div ul li > div a{display: block; font-size: 15px; line-height: 18px; font-weight: 400; background: url('../images/m-icon-more.png') no-repeat right center / 14px;}
     header > div nav > div ul li > div a:not(:last-child){margin-bottom: 24px;}
-    header > div nav > div > a{height: 46px;}
+    header > div nav > div > a{height: 46px; flex-shrink: 0;}
     header > div nav > div button{position: absolute; right: 20px; top: 20px;}
     header > div nav > a{width: 116px; line-height: 38px; font-size: 16px; font-weight: 400; margin-left: 50px;}
     

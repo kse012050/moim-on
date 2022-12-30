@@ -1,8 +1,8 @@
 @media screen and (min-width : 768px) and (max-width : 1180px) {
     /* 메인 */
     /* 메인 공통 */
-    .mainPage{position: relative; overflow: hidden;}
-    .mainPage .BGArea{position: absolute; background: url('../images/main-moimOn.png') no-repeat center top 351px / 1400px; left: 50%; top: 0; width: 100%; min-width: 1500px; max-width: 1920px; height: 100%; transform: translateX(-50%);}
+    .mainPage{position: relative; overflow: hidden; background: url('../images/main-moimOn.png') no-repeat center top 351px / calc(100% + 150px);}
+    .mainPage .BGArea{position: absolute;  left: 50%; top: 0; width: 100%; min-width: 1500px; max-width: 1920px; height: 100%; transform: translateX(-50%);}
     .mainPage .BGArea img{position: absolute; z-index: 0;}
     .mainPage .BGArea img:nth-child(1){width: 404px; left: 0; top: 133px;}
     .mainPage .BGArea img:nth-child(2){width: 490px; right: 0; top: 317px;}
@@ -205,7 +205,9 @@
     .inquiryPage .contentArea fieldset ul li:has(textarea){width: 100%;}
     .inquiryPage .contentArea fieldset ul li :is(input , select , .selectBox){height: 54px;}
     .inquiryPage .contentArea fieldset ul li :is(input , select , textarea , .selectBox){width: 100%; padding: 18px; border: 1px solid #d2d2d2; border-radius: 6px; box-sizing: border-box; outline-color: black;}
+    .inquiryPage .contentArea fieldset ul li :is(input , select , textarea , .selectBox):focus{outline:2px solid black; outline: none;box-shadow: 0 0 0 2px black; }
     .inquiryPage .contentArea fieldset ul li :is(input , select , textarea)::placeholder{color: rgba(25, 26, 28, 0.3);}
+    .inquiryPage .contentArea fieldset ul li :is(input.error , select.error + .selectBox){border-color: #fa5014; outline: none; box-shadow: 0 0 0 2px #fa5014;}
     .inquiryPage .contentArea fieldset ul li select{display: none; background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px;}
     .inquiryPage .contentArea fieldset ul li .selectBox{color: rgba(25, 26, 28, 0.3); background: url('../images/icon-drop-down.png') no-repeat center right 18px / 24px; cursor: pointer;}
     .inquiryPage .contentArea fieldset ul li .selectBox.active{color: #191a1c;}
@@ -217,7 +219,9 @@
     .inquiryPage .contentArea fieldset ul li:not(:last-child){margin-bottom: 50px;}
     .inquiryPage .contentArea fieldset > label{display: block; font-size: 16px; font-weight: 400; color: #777; margin-bottom: 80px;}
     .inquiryPage .contentArea fieldset > label span{color: #000; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px;}
+    .inquiryPage .contentArea fieldset input[type="checkbox"]{display: none;}
     .inquiryPage .contentArea fieldset input[type="checkbox"] + label::before{content: ''; display: inline-block; width: 20px; height: 20px; border: 2px solid #eee; vertical-align: text-top; margin-right: 6px; box-sizing: border-box;}
+    .inquiryPage .contentArea fieldset input[type="checkbox"].error + label::before{border-color: #fa5014;}
     .inquiryPage .contentArea fieldset input[type="checkbox"]:checked + label::before{background: url('../images/icon-check.png') no-repeat center / cover; border: none;}
     .inquiryPage .contentArea fieldset input[type="submit"]{width: 166px; height: 62px; font-size: 19px; font-weight: 500; border: none;}
 }
