@@ -79,7 +79,7 @@
     .servicePage .contentArea section{text-align: left;}
     /* 서비스 소개 */
     .introducePage h2{text-align: center; margin-bottom: 70px;}
-    .introducePage .rowScroll{/* margin-bottom: 100px; */ overflow: auto; height: 115px; position: sticky; top: 0; background-color: white; transition: top 0.5s; z-index: 10; transition: 0.5s;}
+    .introducePage .rowScroll{overflow: auto; height: 115px; position: sticky; top: 0; background-color: white; transition: top 0.5s; z-index: 10; transition: 0.5s;}
     .introducePage .rowScroll.active{top: 86px;}
     .introducePage .rowScroll ul{width: 840px; margin: 0 auto; display: flex; justify-content: space-between; transition: 0.5s;}
     .introducePage .rowScroll ul li{width: 70px; transition: 0.5s;}
@@ -113,15 +113,12 @@
     .introducePage .contentArea section .textArea ol li p{font-size: 16px; font-weight: 400; line-height: 22px;}
     .introducePage .contentArea section .imgArea{flex: 1; position: relative;}
     .introducePage .contentArea section .imgArea img{position: absolute;}
-    /* .introducePage .contentArea section .imgArea img[data-size="full"]{width: 100%;}
-    .introducePage .contentArea section .imgArea img[data-size="small"]{width: 54.41%; z-index: 1;} */
     .introducePage .contentArea section .imgArea img{width: 100%; max-width: 370px; left: 50%; top: 50%; transform: translate(-50% , -50%);}
     .introducePage .contentArea section .imgArea img[src$="02.png"]{display: none;}
     .introducePage footer{margin-top: 150px;}
 
     /* 서비스 연계 */
     .linkPage .contentArea h2{margin-bottom: 170px;}
-    /* .linkPage .contentArea h2{margin-bottom: 27px;} */
     .linkPage .contentArea > p{margin-bottom: 170px;}
     .linkPage .contentArea section{display: flex; align-items: center;}
     .linkPage .contentArea section:not(:last-of-type){margin-bottom: 240px;}
@@ -159,7 +156,7 @@
     /* 다운로드 */
     .downloadPage .contentArea{padding-top: 90px;}
     .downloadPage .contentArea h2{text-align: center; margin-bottom: 70px;}
-    .downloadPage .contentArea section{height: 390px; display: flex; flex-direction: column; justify-content: center; background-repeat: no-repeat; background-position: right center; background-size: 45%; padding-right: 45%; /* background-size: 37.5%; padding-right: 37.5%; */}
+    .downloadPage .contentArea section{height: 390px; display: flex; flex-direction: column; justify-content: center; background-repeat: no-repeat; background-position: right center; background-size: 45%; padding-right: 45%;}
     .downloadPage .contentArea section:nth-of-type(1){background-image: url('../images/download-img01.png');}
     .downloadPage .contentArea section:nth-of-type(2){background-image: url('../images/download-img02.png');}
     .downloadPage .contentArea section:nth-of-type(3){background-image: url('../images/download-img03.png');}
@@ -191,7 +188,7 @@
     .FAQPage .contentArea ul li button::before{content: 'Q.';}
     .FAQPage .contentArea ul li button::after{content: ''; width: 48px; height: 48px; background: url('../images/icon-open.png') no-repeat center / cover; margin-left: auto; transform: rotate(180deg); transition: transform 0.5s;}
     .FAQPage .contentArea ul li button.active::after{transform: rotate(0);}
-    .FAQPage .contentArea ul li div{display: none; font-size: 18px; font-weight: 400; color: #666; line-height: 30px; /* height: 147px; */ padding: 40px 20px; background-color: #eeeeee; box-sizing: border-box;}
+    .FAQPage .contentArea ul li div{display: none; font-size: 18px; font-weight: 400; color: #666; line-height: 30px; padding: 40px 20px; background-color: #eeeeee; box-sizing: border-box;}
     .FAQPage .contentArea ul li div::before{content: 'A.'; color: rgba(0, 0, 0, 0.3); vertical-align: middle;}
     .FAQPage .contentArea ul li > *::before{font-size: 24px; font-weight: 700; margin-right: 19px;}
 

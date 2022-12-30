@@ -30,7 +30,7 @@
     /* 메인 - 상단*/
     .mainPage .contentArea{text-align: center; position: relative; z-index: 10;}
     .mainPage .contentArea h2{margin-bottom: 52px;}
-    .mainPage .contentArea h2 b{display: block; font-weight: 500; /* max-width: 260px; */ margin: 0 auto 16px;}
+    .mainPage .contentArea h2 b{display: block; font-weight: 500; margin: 0 auto 16px;}
     .mainPage .contentArea > a{display: none; width: 200px; height: 62px; font-size: 19px; font-weight: 500; margin-bottom: 40px;}
     .mainPage .contentArea > p{font-size: 14px; font-weight: 400; color: #666666; line-height: 20px; margin-bottom: 186px;}
     .mainPage .contentArea > p a{font-weight: 700; text-decoration: underline; text-decoration-color: #32c5f4; text-decoration-thickness: 2px;}
@@ -120,7 +120,6 @@
     /* 서비스 연계 */
     .linkPage .contentArea h2{margin-bottom: 80px;}
     .linkPage .contentArea > p{display: none;}
-    .linkPage .contentArea section{/* display: flex; align-items: center; */}
     .linkPage .contentArea section:not(:last-of-type){margin-bottom: 150px;}
     .linkPage .contentArea section div h3{margin-bottom: 30px;}
     .linkPage .contentArea section div :is(ul , p){font-size: 15px; line-height: 22px; margin-bottom: 50px;}

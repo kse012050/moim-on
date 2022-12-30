@@ -2,7 +2,6 @@
     /* 메인 */
     /* 메인 공통 */
     .mainPage{position: relative; overflow: hidden;}
-    /* .mainPage .BG{position: absolute; } */
     .mainPage .BGArea{position: absolute; background: url('../images/main-moimOn.png') no-repeat center top 351px / 1400px; left: 50%; top: 0; width: 100%; width: 1920px; height: 100%; transform: translateX(-50%);}
     .mainPage .BGArea img{position: absolute; z-index: 0;}
     .mainPage .BGArea img:nth-child(1){width: 404px; left: 0; top: 133px;}
@@ -130,14 +129,10 @@
     .introducePage .contentArea section:nth-of-type(5) .imgArea img:nth-of-type(1){right: 0; bottom: -227px;}
     .introducePage .contentArea section:nth-of-type(5) .imgArea img:nth-of-type(2){left: -80px; top: -80px;}
     .introducePage .contentArea section:nth-of-type(6) .imgArea img:nth-of-type(1){left: 0; top: -25px;}
-    /* .introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(1){left: -70px; bottom: -304px;} */
-    /* .introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(2){left: 0; top: -80px;} */
     .introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(1){left: -11%; top: 50%; transform: translateY(calc(-50% + 33%));}
     .introducePage .contentArea section:nth-of-type(7) .imgArea img:nth-of-type(2){left: 0; top: 50%; transform: translateY(calc(-50% - 10%));}
-    /* .introducePage footer{margin-top: 150px;} */
 
     /* 서비스 연계 */
-    /* .linkPage .contentArea h2{margin-bottom: 27px;} */
     .linkPage .contentArea h2{margin-bottom: 170px;}
     .linkPage .contentArea > p{margin-bottom: 170px;}
     .linkPage .contentArea section{display: flex; align-items: center;}
@@ -209,7 +204,7 @@
     .FAQPage .contentArea ul li button::before{content: 'Q.';}
     .FAQPage .contentArea ul li button::after{content: ''; width: 48px; height: 48px; background: url('../images/icon-open.png') no-repeat center / cover; margin-left: auto; transform: rotate(180deg); transition: transform 0.5s;}
     .FAQPage .contentArea ul li button.active::after{transform: rotate(0);}
-    .FAQPage .contentArea ul li div{display: none; font-size: 18px; font-weight: 400; color: #666; line-height: 30px; /* height: 147px; */ padding: 40px 20px; background-color: #eeeeee; box-sizing: border-box;}
+    .FAQPage .contentArea ul li div{display: none; font-size: 18px; font-weight: 400; color: #666; line-height: 30px; padding: 40px 20px; background-color: #eeeeee; box-sizing: border-box;}
     .FAQPage .contentArea ul li div::before{content: 'A.'; color: rgba(0, 0, 0, 0.3); vertical-align: middle;}
     .FAQPage .contentArea ul li > *::before{font-size: 24px; font-weight: 700; margin-right: 19px;}
 
