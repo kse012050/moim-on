@@ -2,6 +2,11 @@ $(document).ready(function(){
     const mobileSize = 767;
     const tablatSize = 1180;
 
+    // 특정 a 태그 클릭 막기 (이용가이드 페이지)
+    $('a[data-link="disable"]').click(function(e){
+        e.preventDefault();
+    })
+
     // 메인 페이지 애니메이션
     // $('.mainPage').length && mainCircleAni();
 
@@ -19,8 +24,17 @@ $(document).ready(function(){
 
     // 모바일 메뉴
     mobileMenu();
-    // 도입문의 셀렉트
-    inquirySelect();
+
+    // 도입문의
+    if($('.inquiryPage').length){
+        // 도입문의 셀렉트
+        inquirySelect();  
+        // 도입문의 인풋 유효성 검사
+        inputValidity();
+        // 도입문의 팝업
+        inquiryPopup()
+    } 
+
 
     function mainCircleAni(){
         let mainBGCircleCount = 6;
@@ -69,9 +83,6 @@ $(document).ready(function(){
             },10)
         })
     }
-
-
-    $('.inquiryPage').length && inputValidity();
 
     function scrollMenu(){
         let scrollPosition = $(window).scrollTop();
@@ -163,6 +174,26 @@ $(document).ready(function(){
         })
     }
 
+    // 도입문의 팝업
+    function inquiryPopup(){
+        $('label span').click(function(){
+            $('.agreePopup').fadeIn().css('display' , 'flex');
+            $('body').css('overflow','hidden');
+        })
+        $('.inquiryPage .contentArea .agreePopup').click(function(){
+            $(this).fadeOut();
+            $('body').removeAttr('style');
+        })
+        $('.inquiryPage .contentArea .agreePopup > div').click(function(e){
+            e.stopPropagation();
+        })
+        $('.inquiryPage .contentArea .agreePopup > div button').click(function(e){
+            e.preventDefault();
+            $('.inquiryPage .contentArea .agreePopup').fadeOut();
+            $('body').removeAttr('style');
+        })
+    }
+
     // 자주 묻는 질문
     function FAQDropdown(){
         $('.FAQPage .contentArea ul li button').click(function(){
@@ -197,7 +228,7 @@ $(document).ready(function(){
         // 인풋 입력시 유효성
         $('[data-input]').on('input',function(){
             let attrValue = $(this).attr('data-input');
-            let validityBoolean;
+            let validityBoolean ;
             attrValue === 'mobile' && (validityBoolean = /^01(\d{9,9})/.test($(this).val()))
             attrValue === 'text' && (validityBoolean = /^[ㄱ-ㅎ|가-힣|a-z|A-Z]+$/.test($(this).val()))
             attrValue === 'email' && (validityBoolean = /[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}/.test($(this).val()))
@@ -213,10 +244,11 @@ $(document).ready(function(){
 
         // submit 버튼을 누르면
         $('input[type="submit"]').click(function(e){
+            e.preventDefault();
             let inputValue = []
 
             // input , select 값 저장
-            $('input , select').not('[type="submit"]').each(function(){
+            $('[data-input]').not('[type="submit"]').each(function(){
                 inputValue.push({
                     selector : $(this),
                     name : $(this).attr('id'),
@@ -239,7 +271,7 @@ $(document).ready(function(){
                 v.attrName === 'checkbox' && (v.boolean = v.selector.is(':checked'))
 
                 // 유효성 검사에서 false가 나오면 error 표시
-                !v.boolean && v.selector.addClass('error')
+                v.boolean === false && v.selector.addClass('error')
             })
 
             // 필수 항목 체크
@@ -247,13 +279,15 @@ $(document).ready(function(){
                 return v.boolean;
             })
 
-            // textarea 내용 저장
-            inputValue.push({
-                selector : $('textarea'),
-                name : $('textarea').attr('id'),
-                value : $('textarea').val(),
+            // 필수 항목 제외한 나머지 값 저장 (textarea , checkbox)
+            $('input , select , textarea').not('[data-input]').not('[type="submit"]').each(function(){
+                inputValue.push({
+                    selector : $(this),
+                    name : $(this).attr('id'),
+                    value : $(this).val(),
+                })
             })
-            
+
            
             // 필수 항목 입력 여부 검사
             if(inputResult){
@@ -262,19 +296,21 @@ $(document).ready(function(){
                 // 최종적으로 value 값만 추출
                 let resultValue = {}
                 inputValue.map((v)=>{
-                    v.attrName !== 'checkbox' ?
+                    v.selector.attr('type') !== 'checkbox' ?
                         (resultValue[v.name] = v.value) :
-                        (resultValue[v.name] = true)
+                        (resultValue[v.name] = v.selector.is(':checked'));
                 })
+
     
                 // resultValue 배열의 value 값으로 데이터 저장
                 // 필수
                 // userName : 이름 , companyName : 회사명 , userMobile : 전화번호 , userEmail : 이메일
                 // userRank : 직급 , userDepartment : 부서 , inquiryType : 문의 내용 , numberOfEmployees : 사원 수
-                // agree : 이용약관 여부 (boolean으로 저장)
+                // requiredAgree : 이용약관 / 개인정보 정책 동의 (boolean으로 저장)
                 // 필수X
                 // contentOfInquiry : 문의 내용
-                // agree만 boolean 나머지는 String ''
+                // chooseAgree : 홍보 및 마케팅 수집 동의 (boolean으로 저장)
+                // requiredAgree , chooseAgree만 boolean 나머지는 String ''
             }else{
                 // 필수 항목이 하나라도 false면 submit 동작 막기
                 e.preventDefault();
@@ -285,6 +321,7 @@ $(document).ready(function(){
                 })
                 focusInput.selector.focus();
             }
+            
         })
     }
 });

@@ -235,11 +235,21 @@
     .inquiryPage .contentArea fieldset ul li select option{display: none;}
     .inquiryPage .contentArea fieldset ul li textarea{height: 199px;}
     .inquiryPage .contentArea fieldset ul li:not(:last-child){margin-bottom: 50px;}
-    .inquiryPage .contentArea fieldset > label{display: block; font-size: 16px; font-weight: 400; color: #777; margin-bottom: 80px;}
-    .inquiryPage .contentArea fieldset > label span{color: #000; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px;}
+    .inquiryPage .contentArea fieldset > label{display: block; font-size: 16px; font-weight: 400; color: #777; cursor: pointer;}
+    .inquiryPage .contentArea fieldset > label span{color: #000; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; cursor: pointer;}
+    .inquiryPage .contentArea fieldset > label:not(:last-of-type){margin-bottom: 20px;}
+    .inquiryPage .contentArea fieldset > label:last-of-type{margin-bottom: 80px;}
     .inquiryPage .contentArea fieldset input[type="checkbox"]{display: none;}
     .inquiryPage .contentArea fieldset input[type="checkbox"] + label::before{content: ''; display: inline-block; width: 20px; height: 20px; border: 2px solid #eee; vertical-align: text-top; margin-right: 6px; box-sizing: border-box;}
     .inquiryPage .contentArea fieldset input[type="checkbox"].error + label::before{border-color: #fa5014;}
     .inquiryPage .contentArea fieldset input[type="checkbox"]:checked + label::before{background: url('../images/icon-check.png') no-repeat center / cover; border: none;}
     .inquiryPage .contentArea fieldset input[type="submit"]{width: 166px; height: 62px; font-size: 19px; font-weight: 500; border: none;}
+    .inquiryPage .contentArea .agreePopup{display: none; justify-content: center; align-items: center; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1001; padding: 30px; box-sizing: border-box;}
+    .inquiryPage .contentArea .agreePopup > div{padding: 60px 30px 50px; background-color: white; border-radius: 10px; position: relative;}
+    .inquiryPage .contentArea .agreePopup > div p{margin-bottom: 20px; font-size: 16px; line-height: 22px;}
+    .inquiryPage .contentArea .agreePopup > div table{border: 1px solid #666666; margin: 0 auto;}
+    .inquiryPage .contentArea .agreePopup > div table th{border-bottom: 1px solid #666666; background-color: #eee;}
+    .inquiryPage .contentArea .agreePopup > div table :is(th , td){padding: 20px;}
+    .inquiryPage .contentArea .agreePopup > div table :is(th , td):not(:last-of-type){border-right: 1px solid #666666;}
+    .inquiryPage .contentArea .agreePopup > div button{position: absolute; right: 20px; top: 15px; width: 25px; height: 25px; background: url('../images/m-icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 }

@@ -4,6 +4,8 @@
 /* 색상 */
 mark{color: #32c5f4;}
 
+a[data-link="disable"]{cursor: auto;}
+
 /* 버튼 */
 [class|="btn"]{text-align: center; border-radius: 10em; display: inline-flex; justify-content: center; align-items: center;}
 .btn-white{color: #191A1C; background-color: white; border: 1px solid #d2d2d2; box-sizing: border-box;}
